@@ -1,0 +1,41 @@
+.workspace {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #0f0f1e;
+  min-width: 0;
+}
+
+.workspace__stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  overflow: hidden;
+}
+
+.workspace__object-container {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.workspace__object-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+.workspace__empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workspace__empty-text {
+  font-size: 18px;
+  color: #555570;
+}
