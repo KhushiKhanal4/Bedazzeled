@@ -1,0 +1,21 @@
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 28px 36px 0;
+  pointer-events: none;
+}
+
+.brand { display: flex; flex-direction: column; color: #fff; transform: rotate(-3deg); text-shadow: 0 1px 10px rgba(57, 76, 70, .12); }
+.brand__name { font: 400 29px/26px "Bradley Hand", "Comic Sans MS", cursive; letter-spacing: -.05em; }
+.brand__tagline { margin-left: 26px; font: 400 22px/24px "Bradley Hand", "Comic Sans MS", cursive; letter-spacing: -.04em; }
+.brand b, .tip-pill span { color: #f59bb5; font-weight: 400; }
+.tip-pill { margin-top: 3px; padding: 10px 18px 9px; color: #5f6c65; background: rgba(255,255,255,.9); border-radius: 999px; box-shadow: 0 8px 24px rgba(81, 95, 82, .1); font: 400 14px/1 "Bradley Hand", "Comic Sans MS", cursive; letter-spacing: .02em; }
+.header-actions { display: flex; gap: 20px; pointer-events: auto; }
+.header-action { display: flex; flex-direction: column; align-items: center; gap: 3px; color: #fff; cursor: default; text-shadow: 0 1px 8px rgba(57, 76, 70, .16); font: 400 13px/1 "Bradley Hand", "Comic Sans MS", cursive; }
+.header-action svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.header-action--clear { margin-left: 2px; }
+@media (max-width: 900px) { .site-header { padding: 20px; } .tip-pill { display: none; } .header-actions { gap: 10px; } }

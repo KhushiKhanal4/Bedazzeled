@@ -5,6 +5,7 @@ import type { DecoratableObject } from "../types";
  * Images are imported so Vite handles hashing and serving them correctly.
  */
 import bgWithPlatform from "../../bedazzeled-assets/objects/bg with platform.png";
+import landscapeBackgroundImage from "../../bedazzeled-assets/objects/bg.png";
 import cameraImg from "../../bedazzeled-assets/objects/camera.png";
 import iphoneImg from "../../bedazzeled-assets/objects/i-phone.png";
 import laptopImg from "../../bedazzeled-assets/objects/laptop.png";
@@ -13,10 +14,17 @@ import waterBottleImg from "../../bedazzeled-assets/objects/water-bottle.png";
 
 export const decoratableObjects: DecoratableObject[] = [
   {
-    id: "camera",
-    name: "Camera",
-    imageSrc: cameraImg,
-    naturalWidth: 2097,
+    id: "water-bottle",
+    name: "Water Bottle",
+    imageSrc: waterBottleImg,
+    naturalWidth: 3258,
+    naturalHeight: 4344,
+  },
+  {
+    id: "laptop",
+    name: "Laptop",
+    imageSrc: laptopImg,
+    naturalWidth: 2352,
     naturalHeight: 2235,
   },
   {
@@ -27,13 +35,6 @@ export const decoratableObjects: DecoratableObject[] = [
     naturalHeight: 2235,
   },
   {
-    id: "laptop",
-    name: "Laptop",
-    imageSrc: laptopImg,
-    naturalWidth: 2352,
-    naturalHeight: 2235,
-  },
-  {
     id: "mirror",
     name: "Mirror",
     imageSrc: mirrorImg,
@@ -41,15 +42,18 @@ export const decoratableObjects: DecoratableObject[] = [
     naturalHeight: 2235,
   },
   {
-    id: "water-bottle",
-    name: "Water Bottle",
-    imageSrc: waterBottleImg,
-    naturalWidth: 3258,
-    naturalHeight: 4344,
+    id: "camera",
+    name: "Camera",
+    imageSrc: cameraImg,
+    naturalWidth: 2097,
+    naturalHeight: 2235,
   },
 ];
 
-/** The background image used inside the workspace stage */
+/** Full-page landscape image used as the visual backdrop */
+export const landscapeBackground = landscapeBackgroundImage;
+
+/** Landscape image with the central pedestal composition */
 export const workspaceBackground = bgWithPlatform;
 
 /** Look up an object by id */

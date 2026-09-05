@@ -1,16 +1,20 @@
 import { WorkspaceProvider } from "./context/WorkspaceContext";
-import { ObjectGallery } from "./components/ObjectGallery";
+import { Header } from "./components/Header";
+import { ObjectDrawer } from "./components/ObjectDrawer";
 import { Workspace } from "./components/Workspace";
-import { StickerLibrary } from "./components/StickerLibrary";
+import { StickerDrawer } from "./components/StickerDrawer";
+import { HowItWorks } from "./components/HowItWorks";
 import "./App.css";
 
 export default function App() {
   return (
     <WorkspaceProvider>
       <div className="app">
-        <ObjectGallery />
         <Workspace />
-        <StickerLibrary />
+        <Header />
+        <ObjectDrawer />
+        <StickerDrawer />
+        <HowItWorks />
       </div>
     </WorkspaceProvider>
   );

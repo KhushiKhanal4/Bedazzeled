@@ -9,7 +9,7 @@ import type {
 import { useHistory } from "../hooks/useHistory";
 
 const defaultState: WorkspaceState = {
-  selectedObjectId: null,
+  selectedObjectId: "water-bottle",
   placedStickers: [],
   selectedStickerId: null,
 };

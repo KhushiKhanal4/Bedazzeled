@@ -5,8 +5,9 @@
 }
 
 body {
-  background: #0f0f1e;
-  color: #e0e0e0;
+  min-width: 320px;
+  background: #dce8d1;
+  color: #53625d;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

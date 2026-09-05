@@ -1,0 +1,11 @@
+.how-it-works { position: absolute; left: 32px; right: 32px; bottom: 22px; z-index: 5; min-height: 116px; padding: 18px 26px 15px; background: rgba(255,255,255,.96); border-radius: 22px; box-shadow: 0 10px 30px rgba(76, 93, 78, .13); color: #53625d; }
+.how-heading { display: flex; align-items: center; gap: 6px; color: #4f5d58; font: 400 18px/1 "Bradley Hand", "Comic Sans MS", cursive; }
+.how-heading span:last-child { color: #f1a0b8; }
+.step-list { display: grid; grid-template-columns: 1.05fr 1.15fr 1.05fr 1.35fr 1.35fr; margin-top: 16px; }
+.step { display: flex; gap: 11px; padding: 0 21px; border-left: 1px solid #e4e5de; }
+.step:first-child { padding-left: 0; border-left: 0; }
+.step__number { color: #e6a0b5; font: 400 15px/1 "Bradley Hand", "Comic Sans MS", cursive; }
+.step strong { display: block; color: #53625d; font: 400 17px/15px "Bradley Hand", "Comic Sans MS", cursive; }
+.step p { margin-top: 6px; color: #8b9690; font: 400 12px/1.2 Arial, sans-serif; }
+@media (max-width: 1000px) { .how-it-works { left: 18px; right: 18px; } .step { padding: 0 10px; } .step p { font-size: 11px; } }
+@media (max-width: 760px) { .how-it-works { position: relative; inset: auto; margin: 16px; } .step-list { grid-template-columns: repeat(2, 1fr); gap: 16px 0; } .step:nth-child(3) { border-left: 0; padding-left: 0; } }
