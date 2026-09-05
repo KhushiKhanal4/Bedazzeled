@@ -11,7 +11,8 @@ export function Workspace() {
   return (
     <main className="scene" style={{ backgroundImage: `url("${landscapeBackground}")` }}>
       <img className="scene__platform" src={workspaceBackground} alt="" aria-hidden="true" />
-      <div className="scene__object-wrap">
+      <div className={`scene__object-wrap scene__object-wrap--${selectedObject?.id ?? "empty"}`}>
+        <div className="scene__object-shadow" aria-hidden="true" />
         {selectedObject && (
           <img
             src={selectedObject.imageSrc}

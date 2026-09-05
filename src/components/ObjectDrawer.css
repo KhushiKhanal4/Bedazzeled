@@ -1,11 +1,11 @@
-.object-drawer { left: 32px; top: 124px; bottom: 166px; width: 280px; }
-.object-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 12px; margin-top: 20px; }
-.object-card { min-width: 0; padding: 10px 7px 8px; border: 1.5px solid transparent; border-radius: 17px; background: transparent; color: #53625d; cursor: default; transition: border-color .2s, background .2s; }
+.object-drawer { left: 32px; top: 124px; bottom: 190px; width: 280px; overflow: hidden; }
+.object-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(0, 1fr); gap: 5px 12px; margin-top: 18px; flex: 1; min-height: 0; overflow: hidden; }
+.object-card { min-width: 0; min-height: 0; padding: 5px 7px 6px; border: 1.5px solid transparent; border-radius: 17px; background: transparent; color: #53625d; cursor: default; transition: border-color .2s, background .2s; overflow: hidden; }
 .object-card:hover { background: #fff9fb; }
 .object-card--selected { border-color: #efa9bd; background: #fffafd; }
-.object-card__image-wrap { display: flex; align-items: center; justify-content: center; height: 104px; }
+.object-card__image-wrap { display: flex; align-items: center; justify-content: center; height: 66px; }
 .object-card__image-wrap img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 5px rgba(83, 78, 59, .08)); }
-.object-card__name { display: block; margin-top: 8px; font: 400 14px/1 "Bradley Hand", "Comic Sans MS", cursive; }
+.object-card__name { display: block; margin-top: 4px; font: 400 13px/1 "Bradley Hand", "Comic Sans MS", cursive; }
 .drawer-footer { margin: auto 0 1px; color: #9aa39d; font: 400 14px/1 "Bradley Hand", "Comic Sans MS", cursive; text-align: center; }
 .drawer-footer span { color: #efa5bd; }
 @media (max-width: 1100px) { .object-drawer { left: 18px; width: 230px; } .object-card__image-wrap { height: 88px; } }
