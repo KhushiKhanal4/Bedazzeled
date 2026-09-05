@@ -1,0 +1,55 @@
+.sticker-library {
+  width: 240px;
+  padding: 16px;
+  background: #1a1a2e;
+  border-left: 1px solid #2a2a4a;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.sticker-library__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sticker-library__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.sticker-library__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  background: #232342;
+  border-radius: 10px;
+  cursor: grab;
+  transition: background 0.2s;
+}
+
+.sticker-library__item:hover {
+  background: #2a2a52;
+}
+
+.sticker-library__item:active {
+  cursor: grabbing;
+}
+
+.sticker-library__image {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.sticker-library__empty,
+.sticker-library__hint {
+  font-size: 13px;
+  color: #666680;
+  line-height: 1.5;
+}

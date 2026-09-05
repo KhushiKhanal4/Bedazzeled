@@ -1,0 +1,12 @@
+.object-drawer { left: 32px; top: 124px; bottom: 166px; width: 280px; }
+.object-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 12px; margin-top: 20px; }
+.object-card { min-width: 0; padding: 10px 7px 8px; border: 1.5px solid transparent; border-radius: 17px; background: transparent; color: #53625d; cursor: default; transition: border-color .2s, background .2s; }
+.object-card:hover { background: #fff9fb; }
+.object-card--selected { border-color: #efa9bd; background: #fffafd; }
+.object-card__image-wrap { display: flex; align-items: center; justify-content: center; height: 104px; }
+.object-card__image-wrap img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 5px rgba(83, 78, 59, .08)); }
+.object-card__name { display: block; margin-top: 8px; font: 400 14px/1 "Bradley Hand", "Comic Sans MS", cursive; }
+.drawer-footer { margin: auto 0 1px; color: #9aa39d; font: 400 14px/1 "Bradley Hand", "Comic Sans MS", cursive; text-align: center; }
+.drawer-footer span { color: #efa5bd; }
+@media (max-width: 1100px) { .object-drawer { left: 18px; width: 230px; } .object-card__image-wrap { height: 88px; } }
+@media (max-width: 760px) { .object-drawer { position: relative; inset: auto; width: calc(100% - 32px); margin: 80px 16px 0; } }
