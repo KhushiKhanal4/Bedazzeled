@@ -1,6 +1,5 @@
+import { stickerLibrary } from "../data/stickers";
 import "./StickerDrawer.css";
-
-const placeholderSlots = Array.from({ length: 12 }, (_, index) => index);
 
 export function StickerDrawer() {
   return (
@@ -9,10 +8,10 @@ export function StickerDrawer() {
         <span>things that sparkle</span>
         <span className="heading-mark">✦</span>
       </div>
-      <div className="sticker-grid" aria-label="Sticker library coming soon">
-        {placeholderSlots.map((slot) => (
-          <div className="sticker-slot" key={slot} aria-hidden="true">
-            <span />
+      <div className="sticker-grid">
+        {stickerLibrary.map((sticker) => (
+          <div className="sticker-slot" key={sticker.id} title={sticker.name}>
+            <img src={sticker.imageSrc} alt={sticker.name} />
           </div>
         ))}
       </div>

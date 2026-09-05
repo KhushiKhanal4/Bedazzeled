@@ -1,10 +1,9 @@
 .sticker-drawer { right: 32px; top: 124px; bottom: 166px; width: 270px; }
-.sticker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 22px; }
-.sticker-slot { position: relative; aspect-ratio: 1; border: 1px dashed #eadde0; border-radius: 14px; background: #fffafb; }
-.sticker-slot::before, .sticker-slot::after, .sticker-slot span::before { content: ""; position: absolute; background: #f2dce2; }
-.sticker-slot::before { width: 19px; height: 1px; top: 50%; left: calc(50% - 9px); }
-.sticker-slot::after { height: 19px; width: 1px; left: 50%; top: calc(50% - 9px); }
-.sticker-slot span::before { width: 5px; height: 5px; border-radius: 50%; top: 24%; left: 24%; background: #f2c7d3; }
+.sticker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 22px; overflow-y: auto; flex: 1; }
+.sticker-slot { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: 14px; background: #fffafb; border: 1px solid #f3e8eb; cursor: grab; transition: background .2s, transform .15s; }
+.sticker-slot:hover { background: #fff5f8; transform: scale(1.04); }
+.sticker-slot:active { cursor: grabbing; }
+.sticker-slot img { max-width: 80%; max-height: 80%; object-fit: contain; pointer-events: none; user-select: none; }
 .drawer-footer--link { text-align: right; color: #e497b0; }
 @media (max-width: 1100px) { .sticker-drawer { right: 18px; width: 220px; } }
 @media (max-width: 760px) { .sticker-drawer { position: relative; inset: auto; width: calc(100% - 32px); margin: 16px; } }
