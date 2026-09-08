@@ -3,7 +3,6 @@ import { Header } from "./components/Header";
 import { ObjectDrawer } from "./components/ObjectDrawer";
 import { Workspace } from "./components/Workspace";
 import { StickerDrawer } from "./components/StickerDrawer";
-import { HowItWorks } from "./components/HowItWorks";
 import "./App.css";
 
 export default function App() {
@@ -14,7 +13,6 @@ export default function App() {
         <Header />
         <ObjectDrawer />
         <StickerDrawer />
-        <HowItWorks />
       </div>
     </WorkspaceProvider>
   );

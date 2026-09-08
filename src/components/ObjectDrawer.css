@@ -1,4 +1,4 @@
-.object-drawer { left: 32px; top: 124px; bottom: 190px; width: 280px; overflow: hidden; }
+.object-drawer { left: 32px; top: 124px; bottom: 32px; width: 280px; overflow: hidden; }
 .object-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(0, 1fr); gap: 5px 12px; margin-top: 18px; flex: 1; min-height: 0; overflow: hidden; }
 .object-card { min-width: 0; min-height: 0; padding: 5px 7px 6px; border: 1.5px solid transparent; border-radius: 17px; background: transparent; color: #53625d; cursor: default; transition: border-color .2s, background .2s; overflow: hidden; }
 .object-card:hover { background: #fff9fb; }

@@ -4,8 +4,8 @@ import type { DecoratableObject } from "../types";
  * Catalog of decoratable objects, sourced from the existing repository assets.
  * Images are imported so Vite handles hashing and serving them correctly.
  */
-import bgWithPlatform from "../../bedazzeled-assets/objects/bg with platform.png";
-import landscapeBackgroundImage from "../../bedazzeled-assets/objects/bg.png";
+import platformImage from "../../bedazzeled-assets/objects/platform.png";
+import landscapeBackgroundImage from "../../bedazzeled-assets/objects/Background.png";
 import cameraImg from "../../bedazzeled-assets/objects/camera.png";
 import iphoneImg from "../../bedazzeled-assets/objects/i-phone.png";
 import laptopImg from "../../bedazzeled-assets/objects/laptop.png";
@@ -54,7 +54,7 @@ export const decoratableObjects: DecoratableObject[] = [
 export const landscapeBackground = landscapeBackgroundImage;
 
 /** Landscape image with the central pedestal composition */
-export const workspaceBackground = bgWithPlatform;
+export const workspaceBackground = platformImage;
 
 /** Look up an object by id */
 export function getObjectById(id: string): DecoratableObject | undefined {

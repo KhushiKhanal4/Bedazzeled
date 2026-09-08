@@ -1,8 +1,9 @@
-.sticker-drawer { right: 32px; top: 124px; bottom: 166px; width: 270px; }
-.sticker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 22px; overflow-y: auto; flex: 1; }
-.sticker-slot { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: 14px; background: #fffafb; border: 1px solid #f3e8eb; cursor: grab; transition: background .2s, transform .15s; }
+.sticker-drawer { right: 32px; top: 124px; bottom: 32px; width: 270px; min-width: 0; overflow-x: hidden; }
+.sticker-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 22px; overflow-y: auto; overflow-x: hidden; flex: 1; min-width: 0; }
+.sticker-slot { display: flex; align-items: center; justify-content: center; min-width: 0; aspect-ratio: 1; border-radius: 14px; background: #fffafb; border: 1px solid #f3e8eb; cursor: grab; transition: background .2s, transform .15s; }
 .sticker-slot:hover { background: #fff5f8; transform: scale(1.04); }
 .sticker-slot:active { cursor: grabbing; }
+.sticker-slot--dragging { opacity: .45; transform: scale(.92); }
 .sticker-slot img { max-width: 80%; max-height: 80%; object-fit: contain; pointer-events: none; user-select: none; }
 .drawer-footer--link { text-align: right; color: #e497b0; }
 @media (max-width: 1100px) { .sticker-drawer { right: 18px; width: 220px; } }

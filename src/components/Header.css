@@ -16,6 +16,21 @@
 .tip-pill { margin-top: 3px; padding: 10px 18px 9px; color: #5f6c65; background: rgba(255,255,255,.9); border-radius: 999px; box-shadow: 0 8px 24px rgba(81, 95, 82, .1); font: 400 14px/1 "Bradley Hand", "Comic Sans MS", cursive; letter-spacing: .02em; }
 .header-actions { display: flex; gap: 20px; pointer-events: auto; }
 .header-action { display: flex; flex-direction: column; align-items: center; gap: 3px; color: #fff; cursor: default; text-shadow: 0 1px 8px rgba(57, 76, 70, .16); font: 400 13px/1 "Bradley Hand", "Comic Sans MS", cursive; }
+.header-action:disabled { opacity: .45; cursor: not-allowed; }
 .header-action svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.header-action__camera { font-size: 22px; line-height: 23px; }
+.capture-button { position: fixed; left: 50%; bottom: 92px; transform: translateX(-50%); z-index: 12; flex-direction: row; gap: 9px; padding: 14px 28px; border-radius: 999px; background: rgba(255,255,255,.97); color: #c86f8d; text-shadow: none; box-shadow: 0 10px 28px rgba(72, 84, 70, .24); font-size: 17px; }
 .header-action--clear { margin-left: 2px; }
 @media (max-width: 900px) { .site-header { padding: 20px; } .tip-pill { display: none; } .header-actions { gap: 10px; } }
+
+.capture-modal { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: 24px; background: rgba(38, 53, 46, .42); pointer-events: auto; }
+.capture-card { position: relative; width: min(390px, 88vw); padding: 18px; border: 1px solid #f1eee8; border-radius: 4px; background: #fff; box-shadow: 0 20px 60px rgba(35, 50, 42, .3); pointer-events: auto; transform: rotate(-1deg); }
+.capture-card img { display: block; width: 100%; max-height: 72vh; object-fit: contain; border-radius: 0; }
+.capture-actions { position: relative; display: flex; justify-content: center; gap: 16px; margin-top: 18px; pointer-events: auto; }
+.capture-actions a, .capture-actions button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-width: 132px; padding: 11px 16px; border-radius: 999px; background: #fff1f5; color: #c86f8d; cursor: pointer; font: 15px "Bradley Hand", "Comic Sans MS", cursive; text-decoration: none; }
+.capture-actions span { vertical-align: 1px; }
+.share-menu { position: absolute; right: 0; bottom: 48px; display: flex; flex-direction: column; gap: 6px; padding: 8px; border-radius: 14px; background: #fff; box-shadow: 0 8px 25px rgba(60, 70, 60, .2); }
+.share-menu button { white-space: nowrap; }
+.icon-download { font-size: 20px; line-height: 10px; }
+.share-logo { width: 17px; height: 17px; vertical-align: -4px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.share-logo__dot { fill: currentColor; stroke: none; }

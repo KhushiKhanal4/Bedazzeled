@@ -1,15 +1,28 @@
 .scene { position: absolute; inset: 0; overflow: hidden; background-position: center; background-size: cover; background-repeat: no-repeat; }
-.scene__platform { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.scene__platform { position: absolute; z-index: 2; left: 50%; bottom: 2%; width: min(440px, 43vw); height: min(235px, 28vh); transform: translateX(-50%); object-fit: contain; pointer-events: none; filter: drop-shadow(0 18px 20px rgba(60, 53, 39, .18)); }
 
 .scene__object-wrap {
   position: absolute;
-  z-index: 2;
+   z-index: 3;
   left: 50%;
-  top: 62%;
-  width: min(320px, 26vw);
-  height: min(520px, 60vh);
+   top: 43%;
+   width: min(380px, 31vw);
+   height: min(610px, 56vh);
   transform: translate(-50%, -50%);
-  perspective: 900px;
+   perspective: 900px;
+   animation: object-enter .95s cubic-bezier(.18, .72, .2, 1) both;
+   will-change: transform, opacity;
+}
+
+@keyframes object-enter {
+  from {
+    opacity: 0;
+    transform: translate(calc(-50% - 90px), -50%) rotateY(-32deg) rotateX(7deg) rotateZ(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
 }
 
 .scene__object {
@@ -17,19 +30,19 @@
   height: 100%;
   object-fit: contain;
   transform: rotateY(-8deg) rotateX(4deg) rotateZ(-2deg);
-  filter: drop-shadow(0 18px 14px rgba(68, 63, 46, .28));
+   filter: drop-shadow(0 18px 13px rgba(61, 54, 40, .34));
   transition: transform .4s ease;
 }
 
 .scene__object-shadow {
   position: absolute;
-  bottom: 2%;
+   bottom: 5%;
   left: 50%;
   width: 72%;
   height: 5%;
   transform: translateX(-50%) rotateX(75deg) scale(1.1);
-  background: radial-gradient(ellipse at center, rgba(55, 50, 35, .35) 0%, rgba(55, 50, 35, .12) 50%, transparent 75%);
-  filter: blur(6px);
+   background: radial-gradient(ellipse at center, rgba(55, 50, 35, .42) 0%, rgba(55, 50, 35, .16) 48%, transparent 75%);
+   filter: blur(8px);
   pointer-events: none;
 }
 
@@ -37,8 +50,8 @@
   position: absolute;
   z-index: 1;
   left: 50%;
-  top: 62%;
-  width: min(500px, 40vw);
+   top: 43%;
+   width: min(500px, 40vw);
   height: min(200px, 25vh);
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -48,12 +61,44 @@
 }
 
 @media (max-width: 1100px) {
-  .scene__object-wrap { width: 240px; height: 420px; }
+  .scene__platform { width: 380px; height: 210px; bottom: 2%; }
+  .scene__object-wrap { top: 43%; width: 300px; height: 470px; }
+}
+
+.scene__lost-stone {
+  position: fixed;
+  z-index: 30;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  animation: stone-fall .9s cubic-bezier(.45, 0, .8, .25) forwards;
+}
+
+.scene--capturing .scene__object-wrap {
+  animation: none;
+  transform: translate(-50%, -50%);
+}
+
+.scene--capturing .scene__object {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes stone-fall {
+  to { transform: translate(35px, 330px) rotate(180deg); opacity: 0; }
 }
 
 @media (max-width: 760px) {
   .scene { position: relative; min-height: 560px; }
-  .scene__platform { object-position: center bottom; }
-  .scene__object-wrap { top: 57%; width: 200px; height: 320px; }
+   .scene__platform { width: 320px; height: 185px; bottom: 2%; }
+   .scene__object-wrap { top: 43%; width: 240px; height: 370px; }
   .scene__object { transform: rotateY(-6deg) rotateX(3deg) rotateZ(-1deg); }
 }
